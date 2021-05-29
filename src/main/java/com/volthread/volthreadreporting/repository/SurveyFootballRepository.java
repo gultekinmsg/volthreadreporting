@@ -7,5 +7,6 @@ import java.util.List;
 
 public interface SurveyFootballRepository extends CrudRepository<SurveyFootball, Long> {
     List<SurveyFootball> findAll();
+
     SurveyFootball findSurveyFootballById(Long id);
 }

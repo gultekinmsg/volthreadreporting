@@ -26,12 +26,17 @@ public class SurveyFootballController {
     }
 
     @GetMapping("/football")
-    public List<FootballResponse> getHappiness() {
+    public List<FootballResponse> getFootball() {
         return surveyFootballService.getFootballSurveys();
     }
 
     @DeleteMapping("/football/delete/{footballId}")
-    public void deleteHappiness(@PathVariable Long footballId) {
+    public void deleteFootball(@PathVariable Long footballId) {
         surveyFootballService.deleteFootball(footballId);
+    }
+
+    @PutMapping("/football/change/{footballId}")
+    public void changeFootball(@RequestBody @Valid FootballRequest footballRequest, @PathVariable Long footballId) {
+        surveyFootballService.changeFootball(footballRequest, footballId);
     }
 }

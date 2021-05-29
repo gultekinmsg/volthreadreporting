@@ -45,13 +45,13 @@ public class Mapper {
 
     public static HappinessResponse getHappinessResponse(SurveyHappiness surveyHappiness) {
         HappinessResponse happinessResponse = new HappinessResponse();
-        BeanUtils.copyProperties(surveyHappiness,happinessResponse);
+        BeanUtils.copyProperties(surveyHappiness, happinessResponse);
         return happinessResponse;
     }
 
     public static FootballResponse getFootballResponse(SurveyFootball surveyFootball) {
         FootballResponse footballResponse = new FootballResponse();
-        BeanUtils.copyProperties(surveyFootball,footballResponse);
+        BeanUtils.copyProperties(surveyFootball, footballResponse);
         return footballResponse;
     }
 

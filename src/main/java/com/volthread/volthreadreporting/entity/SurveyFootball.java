@@ -23,5 +23,4 @@ public class SurveyFootball {
     private Gender gender;
     @Temporal(TemporalType.DATE)
     private Date birthDate;
-
 }

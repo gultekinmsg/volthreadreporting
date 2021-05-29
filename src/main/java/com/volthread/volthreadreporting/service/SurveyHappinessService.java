@@ -41,4 +41,14 @@ public class SurveyHappinessService {
         }
         surveyHappinessRepository.delete(surveyHappiness);
     }
+
+    public void changeHappiness(HappinessRequest happinessRequest, Long id) {
+        SurveyHappiness surveyHappiness = surveyHappinessRepository.findSurveyHappinessById(id);
+        if (surveyHappiness == null) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Happiness survey item with id: " + id + " not exist");
+        }
+        SurveyHappiness surveyHappiness1 = Mapper.getHappiness(happinessRequest);
+        surveyHappiness1.setId(surveyHappiness.getId());
+        surveyHappinessRepository.save(surveyHappiness1);
+    }
 }

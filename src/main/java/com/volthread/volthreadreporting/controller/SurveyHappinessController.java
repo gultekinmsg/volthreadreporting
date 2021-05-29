@@ -34,4 +34,9 @@ public class SurveyHappinessController {
     public void deleteHappiness(@PathVariable Long happinesId) {
         surveyHappinessService.deleteHappiness(happinesId);
     }
+
+    @PutMapping("/happiness/change/{happinesId}")
+    public void changeHappiness(@RequestBody @Valid HappinessRequest happinessRequest, @PathVariable Long happinesId) {
+        surveyHappinessService.changeHappiness(happinessRequest, happinesId);
+    }
 }

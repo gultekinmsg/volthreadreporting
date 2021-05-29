@@ -42,4 +42,14 @@ public class SurveyFootballService {
         }
         surveyFootballRepository.delete(surveyFootball);
     }
+
+    public void changeFootball(FootballRequest footballRequest, Long id) {
+        SurveyFootball surveyFootball = surveyFootballRepository.findSurveyFootballById(id);
+        if (surveyFootball == null) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Football survey item with id: " + id + " not exist");
+        }
+        SurveyFootball surveyFootball1 = Mapper.getFootball(footballRequest);
+        surveyFootball1.setId(surveyFootball.getId());
+        surveyFootballRepository.save(surveyFootball1);
+    }
 }

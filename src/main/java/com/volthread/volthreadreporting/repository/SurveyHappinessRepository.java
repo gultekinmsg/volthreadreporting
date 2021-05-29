@@ -7,5 +7,6 @@ import java.util.List;
 
 public interface SurveyHappinessRepository extends CrudRepository<SurveyHappiness, Long> {
     List<SurveyHappiness> findAll();
+
     SurveyHappiness findSurveyHappinessById(Long id);
 }
