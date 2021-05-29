@@ -26,12 +26,12 @@ public class SurveyHappinessController {
     }
 
     @GetMapping("/happiness")
-    public List<HappinessResponse> getHappiness(){
+    public List<HappinessResponse> getHappiness() {
         return surveyHappinessService.getHappinessSurveys();
     }
 
     @DeleteMapping("/happiness/delete/{happinesId}")
-    public void deleteHappiness(@PathVariable Long happinesId){
+    public void deleteHappiness(@PathVariable Long happinesId) {
         surveyHappinessService.deleteHappiness(happinesId);
     }
 }

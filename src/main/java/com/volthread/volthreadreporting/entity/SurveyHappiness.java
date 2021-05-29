@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Getter
 @Setter
@@ -16,10 +17,12 @@ public class SurveyHappiness {
     private String mostHappy;
     private String mostUnHappy;
     private String explanation;
-    @ManyToOne
-    @JoinColumn(name = "pollster_id")
-    private Pollster pollster;
-    @ManyToOne
-    @JoinColumn(name = "particapator_id")
-    private Particapator particapator;
+    private String pollsterName;
+    private String pollsterSurname;
+    private String name;
+    private String surname;
+    @Enumerated(EnumType.STRING)
+    private Gender gender;
+    @Temporal(TemporalType.DATE)
+    private Date birthDate;
 }
