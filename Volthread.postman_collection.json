@@ -1,0 +1,234 @@
+{
+	"info": {
+		"_postman_id": "dbbda23b-4229-45dc-a60d-a51b54427bb9",
+		"name": "Volthread",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AddFootball",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"muhammed\",\r\n    \"surname\":\"gltekin\",\r\n    \"gender\":\"FEMALE\",\r\n    \"birthDate\":\"24-02-1997\",\r\n    \"fanOf\":\"second\",\r\n    \"explanation\":\"This is test\",\r\n    \"pollsterName\":\"testPolls\",\r\n    \"pollsterSurname\":\"testPollsSur\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/football",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"football"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddHappiness",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"muhammed\",\r\n    \"surname\":\"gltekin\",\r\n    \"gender\":\"MALE\",\r\n    \"birthDate\":\"24-02-1997\",\r\n    \"happiness\":\"8\",\r\n    \"mostHappy\":\"MostHappyFieldValue\",\r\n    \"mostUnHappy\":\"MostUnHappyFieldValue\",\r\n    \"explanation\":\"This is test\",\r\n    \"pollsterName\":\"testPolls\",\r\n    \"pollsterSurname\":\"testPollsSur\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/happiness",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"happiness"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetFootball",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/football",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"football"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetHappiness",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/happiness",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"happiness"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteFootball",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/football/delete/10",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"football",
+						"delete",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteHappiness",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/happiness/delete/11",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"happiness",
+						"delete",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Swagger",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/v2/api-docs",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v2",
+						"api-docs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change Happiness",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Changed\",\r\n    \"surname\":\"gltekin\",\r\n    \"gender\":\"MALE\",\r\n    \"birthDate\":\"24-02-1997\",\r\n    \"happiness\":\"8\",\r\n    \"mostHappy\":\"MostHappyFieldValue\",\r\n    \"mostUnHappy\":\"MostUnHappyFieldValue\",\r\n    \"explanation\":\"This is test\",\r\n    \"pollsterName\":\"testPolls\",\r\n    \"pollsterSurname\":\"testPollsSur\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/happiness/change/12",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"happiness",
+						"change",
+						"12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change Football",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Changed\",\r\n    \"surname\":\"gltekin\",\r\n    \"gender\":\"FEMALE\",\r\n    \"birthDate\":\"24-02-1997\",\r\n    \"fanOf\":\"random\",\r\n    \"explanation\":\"This is test\",\r\n    \"pollsterName\":\"testPolls\",\r\n    \"pollsterSurname\":\"testPollsSur\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/football/change/15",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"football",
+						"change",
+						"15"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Statistics",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/statistics",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"statistics"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

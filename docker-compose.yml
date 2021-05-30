@@ -1,0 +1,28 @@
+version: "3.7"
+services:
+  reportingapp:
+    build: .
+    ports:
+      - 8081:8081
+    networks:
+      - reportingnet
+    depends_on:
+      - reportingdb
+  reportingdb:
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: 'reportingdb'
+      MYSQL_USER: 'volthusr'
+      MYSQL_PASSWORD: 'volthpass'
+      MYSQL_ROOT_PASSWORD: 'rootpass'
+    ports:
+      - 3306:3306
+    volumes:
+      - reportingdb-data:/var/lib/mysql
+    networks:
+      - reportingnet
+volumes:
+  reportingdb-data:
+networks:
+  reportingnet:
+
