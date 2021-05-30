@@ -52,6 +52,9 @@ Path:
 
      Volthread.postman_collection.json
 
+## Swagger Documentation:
+
+Swagger api-docs can be reached with swagger request what in the postman collection.
 
 ## Creator and Contributors
 
