@@ -34,24 +34,23 @@ public class StatisticService {
 
     public HashMap<String, Integer> calculateTeamRatio() {
         List<String> uniqueSurveyTeams = surveyFootballRepository.uniqueTeams();
-        Integer teamCount = uniqueSurveyTeams.size();
         HashMap<String, Integer> fanCount = new HashMap<>();
-        for (int i = 0; i < teamCount; i++) {
-            fanCount.put(uniqueSurveyTeams.get(i).toLowerCase(Locale.ROOT), 0);
+        for (String uniqueSurveyTeam : uniqueSurveyTeams) {
+            fanCount.put(uniqueSurveyTeam.toLowerCase(Locale.ROOT), 0);
         }
         List<String> allSurveyTeams = surveyFootballRepository.teams();
         Integer voteCount = allSurveyTeams.size();
 
-        for (int j = 0; j < voteCount; j++) {
-            fanCount.put(allSurveyTeams.get(j).toLowerCase(Locale.ROOT), fanCount.get(allSurveyTeams.get(j).toLowerCase(Locale.ROOT)) + 1);
+        for (String allSurveyTeam : allSurveyTeams) {
+            fanCount.put(allSurveyTeam.toLowerCase(Locale.ROOT), fanCount.get(allSurveyTeam.toLowerCase(Locale.ROOT)) + 1);
         }
-        for (int k = 0; k < teamCount; k++) {
-            fanCount.put(uniqueSurveyTeams.get(k).toLowerCase(Locale.ROOT), calculatePerCentage(fanCount.get(uniqueSurveyTeams.get(k).toLowerCase(Locale.ROOT)), voteCount));
+        for (String uniqueSurveyTeam : uniqueSurveyTeams) {
+            fanCount.put(uniqueSurveyTeam.toLowerCase(Locale.ROOT), calculatePercentage(fanCount.get(uniqueSurveyTeam.toLowerCase(Locale.ROOT)), voteCount));
         }
         return fanCount;
     }
 
-    public Integer calculatePerCentage(Integer thisOne, Integer total) {
+    public Integer calculatePercentage(Integer thisOne, Integer total) {
         return (thisOne * 100) / total;
     }
 }

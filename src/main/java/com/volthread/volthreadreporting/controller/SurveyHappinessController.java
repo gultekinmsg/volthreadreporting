@@ -30,13 +30,13 @@ public class SurveyHappinessController {
         return surveyHappinessService.getHappinessSurveys();
     }
 
-    @DeleteMapping("/happiness/delete/{happinesId}")
-    public void deleteHappiness(@PathVariable Long happinesId) {
-        surveyHappinessService.deleteHappiness(happinesId);
+    @DeleteMapping("/happiness/delete/{happinessId}")
+    public void deleteHappiness(@PathVariable Long happinessId) {
+        surveyHappinessService.deleteHappiness(happinessId);
     }
 
-    @PutMapping("/happiness/change/{happinesId}")
-    public void changeHappiness(@RequestBody @Valid HappinessRequest happinessRequest, @PathVariable Long happinesId) {
-        surveyHappinessService.changeHappiness(happinessRequest, happinesId);
+    @PutMapping("/happiness/change/{happinessId}")
+    public void changeHappiness(@RequestBody @Valid HappinessRequest happinessRequest, @PathVariable Long happinessId) {
+        surveyHappinessService.changeHappiness(happinessRequest, happinessId);
     }
 }
