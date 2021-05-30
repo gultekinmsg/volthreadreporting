@@ -103,5 +103,4 @@ class SurveyHappinessServiceTest {
         }
         assertNotNull(responseStatusException);
     }
-
 }

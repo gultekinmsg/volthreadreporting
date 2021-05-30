@@ -1,5 +1,6 @@
 package com.volthread.volthreadreporting.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.volthread.volthreadreporting.entity.Gender;
 import lombok.Data;
 
@@ -11,6 +12,7 @@ public class HappinessResponse {
     private String name;
     private String surname;
     private Gender gender;
+    @JsonFormat(pattern = "dd-MM-yyyy")
     private Date birthDate;
     private Integer happiness;
     private String mostHappy;
