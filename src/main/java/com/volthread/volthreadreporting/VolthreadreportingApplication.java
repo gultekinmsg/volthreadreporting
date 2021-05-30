@@ -13,25 +13,3 @@ public class VolthreadreportingApplication {
     }
 
 }
-
-
-/*
-*  TODO
-*   Save change delete and show methods for forms. -> ok
-*   Get statistics from forms -> ok
-*   Unit Test(Both Service and Controller Layer) -> ok
-*   Additionals:
-*   Dockerize
-*   PostmanCollection -> ok
-*   Swagger -> ok
-*   ReadMe -> ok
-*
-*
-*
-*
-*
-*
-*
-*
-*
-* */
